@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #333; /* Example - adjust to your liking */
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  margin-bottom: 30px; /* Space between header and content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.highlight {
+  color: #f9d71c; /* Example highlight color */
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.tagline {
+  font-family: "Roboto", sans-serif;
+
+  font-style: italic;
+}
+
+#model-creation h2 {
+  margin: 0 10px;
+}
+
+#image-classes {
+  display: flex; /* Arrange cards horizontally */
+  justify-content: space-around; /* Distribute space */
+}
+
+.card {
+  border: 1px solid #eee; /* Softer border */
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 1;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.card button {
+  margin: 10px 5px; /* Spacing around buttons */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove button border */
+  background-color: #333; /* Button color */
+  color: #fff; /* Text color */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card button:hover {
+  background-color: #555; /* Darker button color on hover */
+}
+
+.image-preview {
+  max-height: 150px; /* Limit preview area height */
+  overflow: hidden;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px 10px;
+  gap: 10px;
+}
+
+.class-name {
+  text-align: left; /* Align input to left */
+}
+
+.class-name input {
+  width: calc(50% - 20px); /* Occupy available width */
+  padding: 8px 10px;
+  border: none;
+  border-bottom: 1px solid #ddd; /* Underline */
+}
+
+#train-model {
+  /* button */
+  margin: 0 50%; /* Spacing around buttons */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove button border */
+  background-color: #45fa13; /* Button color */
+  color: #fff; /* Text color */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#train-model:hover {
+  background-color: #44bb2f; /* Darker button color on hover */
+}
