@@ -29,48 +29,93 @@
                 <div class="card">
                     <div class="card">
                         <div class="class-name">
-                            <input type="text" placeholder="Enter class name" value="Class 1">
+                            <input type="text" placeholder="Enter class name" value="Class 1" id="class-name-1">
                         </div>
                     </div>
                     <div class="container">
                         <div>
-                            <button class="upload-btn">Upload Images</button>
+                            <div class="upload-options">
+                                <button class="upload-dropdown-btn">Upload Images</button>
+                                <div class="dropdown-content">
+                                    <div>
+                                        <label for="image-upload-dropdown">Upload Separate Images:</label>
+                                        <button class="dropdown-close-btn">close</button>
+                                    </div>
+                                    <input type="file" id="image-upload-1" accept="image/*" multiple
+                                        data-class-name="class-name-1">
+
+                                    <!-- <label for="zip-upload-dropdown">Or Upload a Zip File:</label>
+                                    <input type="file" id="zip-upload-2" accept=".zip"> -->
+
+                                    <button id="upload-btn-1" class="upload-btn">Upload</button>
+                                    <p class="upload-status" id="upload-status-1"></p>
+                                </div>
+                            </div>
                             <button id="webcam-btn-1" class="webcam-btn">Use Webcam</button>
                         </div>
-                        <video id="preview-1" class="image-preview"></video>
+                        <img src="" alt="" class="image-preview">
+                        <video class="video-preview"></video>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card">
                         <div class="class-name">
-                            <input type="text" placeholder="Enter class name" value="Class 2">
+                            <input type="text" placeholder="Enter class name" value="Class 2" id="class-name-2">
                         </div>
                     </div>
                     <div class="container">
                         <div>
-                            <button class="upload-btn">Upload Images</button>
+                            <div class="upload-options">
+                                <button class="upload-dropdown-btn">Upload Images</button>
+                                <div class="dropdown-content">
+                                    <div>
+                                        <label for="image-upload-dropdown">Upload Separate Images:</label>
+                                        <button class="dropdown-close-btn">close</button>
+                                    </div>
+                                    <input type="file" id="image-upload-2" accept="image/*" multiple
+                                        data-class-name="class-name-2">
+
+                                    <!-- <label for="zip-upload-dropdown">Or Upload a Zip File:</label>
+                                    <input type="file" id="zip-upload-2" accept=".zip"> -->
+
+                                    <button id="upload-btn-2" class="upload-btn">Upload</button>
+                                    <p class="upload-status" id="upload-status-2"></p>
+                                </div>
+                            </div>
                             <button id="webcam-btn-2" class="webcam-btn">Use Webcam</button>
                         </div>
-                        <video id="preview-2" class="image-preview"></video>
+                        <img src="" alt="" class="image-preview">
+                        <video class="video-preview"></video>
                     </div>
                 </div>
             </div>
-
-            <button id="train-model">Train</button>
+            <em>I have not yet added any checks for if the user has uploaded images or not. So please make sure you have
+                uploaded images for both classes before training the model.
+            </em>
+            <br>
+            <button id="train-model-btn">Train</button>
+            <div id="training-status">
+                <p>Nothing to train :(</p>
+                <!-- <div class="loader"></div> -->
             </div>
         </section>
 
         <!-- under these should be a button called Train which will start the training process and when it is completed another section will come under it with the final model and an option to download it or test it live with the webcam -->
-        <section id="model-download" style="display: none;">
+        <section id="model-test-download">
             <div class="container">
                 <h2>Your Model Is Ready!</h2>
-                <button id="download-model">Download</button>
-                <button id="test-live">Test Live</button>
+                <em>Test it by uploading an image</em>
+                <input type="file" id="test-image-upload" accept="image/*">
+                <button id="test-model-btn">Test</button>
+                <img src="" alt="" id="test-image-preview" class="image-preview">
+                <p id="prediction"></p>
+                <button id="download-model">Download Model</button>
             </div>
         </section>
 
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <script src="{{ url_for('static', filename='jszip.min.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
 
     </section>
 </body>

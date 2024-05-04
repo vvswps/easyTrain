@@ -46,6 +46,7 @@ header {
   background-color: #fff; /* White background */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 5px; /* Slightly rounded corners */
+  position: relative;
 }
 
 .card button {
@@ -103,4 +104,128 @@ header {
 
 #train-model:hover {
   background-color: #44bb2f; /* Darker button color on hover */
+}
+
+.upload-options {
+  position: relative; /* To position the dropdown correctly */
+}
+
+.dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute; /* Position relative to the parent */
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 10px;
+}
+
+.dropdown-content p {
+  color: #45fa13;
+}
+
+/* Add a class to show the dropdown */
+.dropdown-content.show {
+  display: block;
+}
+.dropdown-content label,
+.dropdown-content input {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dropdown-content > div {
+  display: flex;
+  justify-content: space-between;
+}
+.card .dropdown-close-btn {
+  background: none;
+  border: none;
+  color: #ff6464;
+  cursor: pointer;
+
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.card .dropdown-close-btn:hover {
+  color: #ff0000;
+}
+
+#model-test-download {
+  display: none;
+}
+
+#train-model-btn {
+  margin: 10px 50%;
+  padding: 10px 20px;
+  border: none;
+  background-color: #45fa13;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#train-model-btn:hover {
+  background-color: #44bb2f;
+}
+
+#model-test-download {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#model-test-download .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#model-test-download h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#model-test-download em {
+  display: block;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#model-test-download input[type="file"] {
+  margin-bottom: 20px;
+}
+
+#model-test-download button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#model-test-download button:hover {
+  background-color: #0056b3;
+}
+
+#model-test-download .image-preview {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#model-test-download #prediction {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
 }
