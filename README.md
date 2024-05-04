@@ -2,6 +2,10 @@
 
 A user-friendly application for training custom image classification models directly in your browser without writing even a single line of code.
 
+## Images
+
+![Screenshot of the application](screenshot.png)
+
 ## Current Features
 
 - Dataset Management: Upload, preview, and preprocess images for training and validation.
